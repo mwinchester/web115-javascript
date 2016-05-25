@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Javascript - changing images onclick</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myscript.js"></script>
+</head>
+<body>
+<div class="container">
+<header><h1>Introducing JavaScript - changing images onclick</h1></header>
+<main>
+
+<h2>Using a HTML ID with JavaScript</h2>
+    <p>A key part of working with JavaScript is undrstanding how JavaScript interacts with HTML. When you are
+trying to affect some part of your HTML you will use an ID to identify what you want to
+interact with. This is a critical concept. If you have been programming in HTML
+you may have wondered why to use an ID instead of just using classes for everything. It is important
+to know that you can only have one instance of an ID per page, so that will uniquely identify that portion
+of the page.</p>
+   <h2>Changing images with JavaScript</h2>
+    <ol>
+        <li>Edit your images and put them inside an images folder inside the folder for your HTML file
+        </li>
+        <li>Add your initial images and the CSS styles to the page</li>
+        <li>Your large image - the one that you want to change when you click on a thumbnail, needs an ID - mine will be <strong>large</strong></li>
+        <li>Write your JavaScript (explained below)</li>
+        <li>Call your JavaScript Function from each thumbnail when it is clicked</li>
+    </ol>
+    <h2>JavaScript code</h2>
+    <code>
+        <br>
+        function change01(){<br>
+        document.getElementById("large").src="images/eli01.jpg";<br>
+        }<br>
+        <br>
+        function change02(){<br>
+        document.getElementById("large").src="images/eliollie1.jpg";<br>
+        }<br>
+        <br>
+        function change03(){<br>
+        document.getElementById("large").src="images/ender01.jpg";<br>
+        }<br>
+        <br>
+        function change04(){<br>
+        document.getElementById("large").src="images/nessie01.jpg";<br>
+        }<br>
+        <br>
+        function change05(){<br>
+        document.getElementById("large").src="images/nosey.jpg";<br>
+        }<br>
+
+    </code>
+    <p> You declare the function with the word function, then provide a name. The .src= will be followed by the
+    address of your image file.</p>
+    <h2>Calling the JavaScript code</h2>
+   <p>Inside of the image tag for each thumbnail, add the code: <code> onclick="change01()"</code><br>
+   the number will change for each thumbnail, so you will have <code>change01(), change02(), etc.</code></p>
+<h2>Demonstration of changing images</h2>
+    <div class="left">
+        <a href="#large"><img src="images/eli01.jpg" alt="Eli the black bouvier" height="125" title="Eli the black bouvier" onclick="change01()"></a><br>
+        <a href="#large"><img src="images/eliollie1.jpg" alt="Eli and Ollie Bouviers" height="125" title="Eli makes friends with Ollie" onclick="change02()"></a><br>
+        <a href="#large"><img src="images/ender01.jpg" alt="Beagle mix" height="125" title="Ender, a beagle mix"onclick="change03()"></a><br>
+        <a href="#large"><img src="images/nessie01.jpg" alt="Nessie, a black female bouvier" height="125" title="Nessie, a black female bouvier" onclick="change04()"></a><br>
+        <a href="#large"><img src="images/nosey.jpg" alt="two bouvier butts" height="125" title="Nosey bouviers, Eli and Ollie" onclick="change05()"></a><br>
+    </div>
+    <div class="right">
+        <img id="large" src="images/eli01.jpg" alt="Meri's Dogs">
+    </div>
+</main>
+</div>
+
+
+</body>
+
+
+</html>
